@@ -30,10 +30,6 @@ const ChannelDetail = () => {
     fetchResults();
   }, [id]);
 
-  // useEffect(() => {
-  //   console.log(videos, channelDetail);
-  // }, [channelDetail]);
-
   return (
     <Box minHeight="95vh">
       <Box>
