@@ -10,9 +10,9 @@ const SearchBar = () => {
   const onhandleSubmit = (e) => {
     e.preventDefault();
 
+    // if search term is submitted, auto redirect to search
     if (searchTerm) {
       navigate(`/search/${searchTerm}`);
-
       setSearchTerm('');
     }
   };

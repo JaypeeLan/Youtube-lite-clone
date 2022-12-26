@@ -15,10 +15,11 @@ const ChannelDetail = () => {
 
   useEffect(() => {
     const fetchResults = async () => {
+      // get details of first channel in the list
       const data = await fetchFromAPI(`channels?part=snippet&id=${id}`);
-
       setChannelDetail(data?.items[0]);
 
+      // videos of the channel
       const videosData = await fetchFromAPI(
         `search?channelId=${id}&part=snippet%2Cid&order=date`
       );
@@ -28,6 +29,10 @@ const ChannelDetail = () => {
 
     fetchResults();
   }, [id]);
+
+  // useEffect(() => {
+  //   console.log(videos, channelDetail);
+  // }, [channelDetail]);
 
   return (
     <Box minHeight="95vh">
