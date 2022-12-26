@@ -10,6 +10,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [videos, setVideos] = useState(null);
+ 
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const VideoDetail = () => {
     );
   }, [id]);
 
-  if (!videoDetail?.snippet) return <Loader/>;
+  if (!videoDetail?.snippet) return <Loader />;
 
   const {
     snippet: { title, channelId, channelTitle },
