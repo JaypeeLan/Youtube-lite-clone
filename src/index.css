@@ -12,14 +12,18 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 7px;
   height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(114, 113, 113);
+  background-color: rgb(181 140 140);
   border-radius: 10px;
-  height: 200px;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {
